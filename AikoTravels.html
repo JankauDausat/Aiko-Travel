@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="Aiko 2.css">
+    </head>
+<body>
+    <div class="container">
+        <img src="WhatsApp Image 2024-11-06 at 15.13.41.jpeg" alt="Nature">
+    <div class="form-section">
+        <h2>Let's Start Your Journey</h2>
+        <form action="footer.html">
+            <label for="Email">SIGN IN</label>
+            <input type="Email" id="Email" Placeholder="Type Your Email" required>
+            <input type="password" id="Password" Placeholder="Password" required>
+            <script>
+                const correctEmail = "Wiweko@gmail.com";
+                const correctPassword = "siretrikasir123";
+                let attemptCount = 0;
+    
+                document.getElementById("loginForm").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    
+                    const email = document.getElementById("email").value;
+                    const password = document.getElementById("password").value;
+                    
+                    if (email === correctEmail && password === correctPassword) {
+                        window.location.href = "../after/after-login.html";
+                    } else {
+                        attemptCount++;
+                        document.getElementById("error-message").style.display = "block";
+                    
+                        if (attemptCount >= 3) {
+                            document.getElementById("resetButton").style.display = "block";
+                        }
+                    }
+                });
+    
+                document.getElementById("resetButton").addEventListener("click", function() {
+                    alert("Silakan hubungi admin untuk mereset password Anda.");
+                });</script>
+        <a href="AikoTravels.html" class="Reset Password">Reset Password?</a>
+        <button type="submit">SIGN IN</button>
+        <p class="sign-up">Not A Member Yet?<a href="">Sign Up Now</a></p>
+        </form>
+        </form>
+        </form>
+    </div>
+</div>
+</body>
+ </html>
